@@ -44,8 +44,8 @@ function App() {
 
       <div>
         <h2>{contador}</h2>
-        <button onClick={AddContador}>+</button>
         <button onClick={SubContador}>-</button>
+        <button onClick={AddContador}>+</button>
       </div>
     </div>
   )
