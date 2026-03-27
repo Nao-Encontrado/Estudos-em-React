@@ -23,6 +23,12 @@ app.post("/transacoes", (req, res) => {
     res.json(novaTransacao)
 })
 
+// DELETE para limpar o saldo do JSON
+app.delete("/transacoes/limpar", (req, res) => {
+    fs.writeFileSync(arquivo, JSON.stringify({ "transacoes": [] }, null, 2))
+    res.json({ mensagem: "Dados apagados com sucesso!!!"})
+})
+
 if (!fs.existsSync(arquivo)) {
     fs.writeFileSync(arquivo, JSON.stringify({ transacoes: []}, null, 2))
     console.log("arquivo criado com sucesso!!!")

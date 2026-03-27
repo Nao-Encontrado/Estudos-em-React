@@ -40,6 +40,22 @@ function App() {
       })
   }
 
+  const saldo = transacoes.reduce((total, t) => {
+    if (t.tipo === "receita") return total + Number(t.valor)
+    if (t.tipo === "despesa") return total - Number(t.valor)
+    return total
+  }, 0)
+
+  function LimparDados() {
+    fetch("http://localhost:3001/transacoes/limpar", {
+      method: "DELETE"
+    })
+      .then((res) => res.json())
+      .then((resposta) => {setTransacoes([])
+      console.log(resposta.mensagem)
+      })
+  }
+
   return (
     <div className="mainContainer">
       <h1>Finance</h1>
@@ -63,6 +79,8 @@ function App() {
           </li>
         )))}
       </ul>
+      <h2>Saldo: R$ {saldo}</h2>
+      <button onClick={LimparDados}>Zerar saldo</button>
     </div>
   )
 }

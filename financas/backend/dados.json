@@ -1,16 +1,3 @@
 {
-  "transacoes": [
-    {
-      "id": 1774560252555,
-      "descricao": "JUBILEU",
-      "valor": "12345",
-      "tipo": "despesa"
-    },
-    {
-      "id": 1774560312443,
-      "descricao": "TTESTE",
-      "valor": "200",
-      "tipo": "receita"
-    }
-  ]
+  "transacoes": []
 }
