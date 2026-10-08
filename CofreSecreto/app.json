@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "name": "Cofre Secreto",
+    "slug": "cofre-secreto",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#090d16"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "Utilizamos Face ID para proteger o acesso ao seu Cofre Secreto.",
+        "NSPhotoLibraryUsageDescription": "Precisamos acessar sua galeria para anexar fotos às suas memórias confidenciais."
+      }
+    },
+    "android": {
+      "permissions": [
+        "USE_BIOMETRIC",
+        "USE_FINGERPRINT",
+        "READ_EXTERNAL_STORAGE"
+      ]
+    }
+  }
+}
